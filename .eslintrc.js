@@ -13,6 +13,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    "semi": 0
+    "semi": 0,
+    "no-extend-native": 0,
+    "no-undef": 0,
   },
 };
