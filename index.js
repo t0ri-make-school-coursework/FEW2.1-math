@@ -16,3 +16,28 @@ Number.prototype.ceil = function ceil() {
 Number.prototype.floor = function floor() {
   return Math.floor(Number(this))
 }
+
+// Challenge 3: Pad
+Number.prototype.pad = function pad(x, y) {
+  // Get the number of digits before and after the decimal point
+  let whole = this.toString().split('.')[0].toString().length
+  let dec = this.toString().split('.')[1].toString().length
+  // Create a string to hold the padded number
+  let padded = String(this)
+
+  // Pad the whole digits with zeros
+  if (whole !== x) {
+    for (whole; whole < x; whole += 1) {
+      padded = `0${padded}`
+    }
+  }
+
+  // Pad the decimal digits with zeros
+  if (dec !== y) {
+    for (dec; dec < y; dec += 1) {
+      padded = `${padded}0`
+    }
+  }
+
+  return padded
+}

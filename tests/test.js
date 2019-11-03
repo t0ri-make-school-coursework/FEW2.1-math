@@ -23,3 +23,10 @@ test('Number.floor()', () => {
   expect(Number(9.99).floor()).toBe(Number(9))
   expect(9.99.floor()).toBe(9)
 })
+
+// Challenge 3: Pad
+test('Number.pad()', () => {
+  expect(Number(9.99).pad(2, 3)).toBe(String('09.990'))
+  expect(Number(9.99).pad(10, 10)).toBe(String('0000000009.9900000000'))
+  expect(Number(9.99).pad(1, 2)).toBe(String('9.99'))
+})
