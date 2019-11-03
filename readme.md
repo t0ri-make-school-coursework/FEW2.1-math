@@ -11,5 +11,29 @@ A math library containing properties and functions extended onto  `Number.protot
 `Number.goldenRatio` is equal to `1.61803398875`.
 
 ```
-let goldenRatio = Number.goldenRatio
+let num = Number.goldenRatio
+```
+
+### Round
+The `.round()` method rounds the Number it is called on to the nearest whole number.
+
+```
+let num = 9.99
+num.round() -> 10
+```
+
+### Ceil
+The `.ceil()` method rounds the Number it is called on to the higher whole number.
+
+```
+let num = 9.99
+num.ceil() -> 10
+```
+
+### Floor
+The `.floor()` method rounds the Number it is called on to the lower whole number.
+
+```
+let num = 9.99
+num.floor() -> 9
 ```
