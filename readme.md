@@ -46,3 +46,23 @@ Returns a String.
 let num = 9.99
 34.801.pad(4,3) -> 0009.990
 ```
+
+### Degrees to Radians
+The `.degToRad()` method takes in a number and returns its radian value.
+Accepts an optional argument to return a fixed amount of decimal numbers.
+
+```
+let num = 1
+num.degToRad() -> 0.017453292519943295
+num.degToRad(6) -> 0.017453
+```
+
+### Radians to Degrees
+The `.radToDeg()` method takes in a number and returns its degree value.
+Accepts an optional argument to return a fixed amount of decimal numbers.
+
+```
+let num = 1
+num.radToDeg() ->
+num.radToDeg(4) -> 57.2958
+```

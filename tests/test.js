@@ -26,7 +26,25 @@ test('Number.floor()', () => {
 
 // Challenge 3: Pad
 test('Number.pad()', () => {
+  expect(Number(9.99).pad(1, 2)).toBe(String('9.99'))
   expect(Number(9.99).pad(2, 3)).toBe(String('09.990'))
   expect(Number(9.99).pad(10, 10)).toBe(String('0000000009.9900000000'))
-  expect(Number(9.99).pad(1, 2)).toBe(String('9.99'))
+})
+
+// Challenge 4: Degrees to Radians
+test('Number.degToRad()', () => {
+  expect(Number(9.99).degToRad()).toBe(Number(0.17435839227423353))
+  expect(Number(1).degToRad()).toBe(Number(0.017453292519943295))
+
+  expect(Number(1).degToRad(6)).toBe(Number(0.017453))
+  expect(Number(1).degToRad(1)).toBe(Number(0.0))
+})
+
+// Challenge 5: Radians to Degrees
+test('Number.radToDeg()', () => {
+  expect(Number(9.99).radToDeg()).toBe(Number(572.3848373356924))
+  expect(Number(1).radToDeg()).toBe(Number(57.29577951308232))
+
+  expect(Number(1).radToDeg(4)).toBe(Number(57.2958))
+  expect(Number(1).radToDeg(1)).toBe(Number(57.3))
 })
