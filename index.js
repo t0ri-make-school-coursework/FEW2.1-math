@@ -67,3 +67,20 @@ Number.prototype.radToDeg = function radToDeg(digits) {
 
   return Number(degs)
 }
+
+
+// Challenge 6: Dollar Amount
+Number.prototype.toDollars = function toDollars() {
+  // If input is an integer, return format with template string
+  if (Number.isInteger(Number(this))) {
+    return `$${this}.00`
+  }
+
+  // If input has just 1 decimal number, return format with template string
+  if (this.toString().split('.')[1].toString().length === 1) {
+    return `$${this}0`
+  }
+
+  // If input has 2+ decimal numbers, return format with template string and round down
+  return `$${Math.floor(Number(this) * 100) / 100}`
+}

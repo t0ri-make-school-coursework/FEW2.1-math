@@ -12,6 +12,7 @@ A math library containing properties and methods extended onto  `Number.prototyp
 
 ```
 let num = Number.goldenRatio
+num -> 1.61803398875
 ```
 
 ### Round
@@ -48,7 +49,7 @@ let num = 9.99
 ```
 
 ### Degrees to Radians
-The `.degToRad()` method takes in a number and returns its radian value.
+The `.degToRad()` method returns a number's radian value.
 Accepts an optional argument to return a fixed amount of decimal numbers.
 
 ```
@@ -58,11 +59,19 @@ num.degToRad(6) -> 0.017453
 ```
 
 ### Radians to Degrees
-The `.radToDeg()` method takes in a number and returns its degree value.
+The `.radToDeg()` method returns a number's degree value.
 Accepts an optional argument to return a fixed amount of decimal numbers.
 
 ```
 let num = 1
 num.radToDeg() ->
 num.radToDeg(4) -> 57.2958
+```
+
+### Dollar Amount
+The `.toDollars()` method returns a numeric value formatted in USD.
+
+```
+let num = 1
+num.toDollars() -> '$1.00'
 ```

@@ -48,3 +48,15 @@ test('Number.radToDeg()', () => {
   expect(Number(1).radToDeg(4)).toBe(Number(57.2958))
   expect(Number(1).radToDeg(1)).toBe(Number(57.3))
 })
+
+// Challenge 6: Dollar Amount
+test('Number.toDollars()', () => {
+  expect(9.99.toDollars()).toBe('$9.99')
+  expect(Number(0.01).toDollars()).toBe('$0.01')
+
+  expect(Number(0.1).toDollars()).toBe('$0.10')
+  expect(Number(0.01).toDollars()).toBe('$0.01')
+  expect(Number(1).toDollars()).toBe('$1.00')
+
+  expect(Number(4.129408).toDollars()).toBe('$4.12')
+})
