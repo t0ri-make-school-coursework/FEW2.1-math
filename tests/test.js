@@ -1,4 +1,4 @@
-require('../index')
+require('../src/index')
 
 // Challenge 1: Golden Ratio
 test('Number.GoldenRatio', () => {
