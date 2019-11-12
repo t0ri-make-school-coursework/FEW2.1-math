@@ -22,6 +22,7 @@
   "homepage": "https://github.com/t0ri/FEW2.1-math#readme",
   "devDependencies": {
     "coveralls": "^3.0.7",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "rollup-plugin-terser": "^5.1.2"
   }
 }
