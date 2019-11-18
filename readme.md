@@ -75,3 +75,4 @@ The `.toDollars()` method returns a numeric value formatted in USD.
 let num = 1
 num.toDollars() -> '$1.00'
 ```
+
