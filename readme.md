@@ -76,3 +76,12 @@ let num = 1
 num.toDollars() -> '$1.00'
 ```
 
+### Tax
+The `.tax(rate)` method returns an amount with tax applied.
+Accepts optional argument (number) to calculate tax on amount.
+Without argument, tax rate defaults to `.25`.
+
+```
+let num = 1
+num.tax(.25) -> 1.25
+```

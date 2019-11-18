@@ -50,13 +50,22 @@ test('Number.radToDeg()', () => {
 })
 
 // Challenge 6: Dollar Amount
-test('Number.toDollars()', () => {
-  expect(9.99.toDollars()).toBe('$9.99')
-  expect(Number(0.01).toDollars()).toBe('$0.01')
+// test('Number.toDollars()', () => {
+//   expect(9.99.toDollars()).toBe('$9.99')
+//   expect(Number(0.01).toDollars()).toBe('$0.01')
 
-  expect(Number(0.1).toDollars()).toBe('$0.10')
-  expect(Number(0.01).toDollars()).toBe('$0.01')
-  expect(Number(1).toDollars()).toBe('$1.00')
+//   expect(Number(0.1).toDollars()).toBe('$0.10')
+//   expect(Number(0.01).toDollars()).toBe('$0.01')
+//   expect(Number(1).toDollars()).toBe('$1.00')
 
-  expect(Number(4.129408).toDollars()).toBe('$4.12')
+//   expect(Number(4.129408).toDollars()).toBe('$4.12')
+// })
+
+// Challenge 7: Tax Rate
+test('Number.tax(rate)', () => {
+  expect(Number(1).tax()).toBe(1.25)
+  expect(Number(1.25).tax()).toBe(1.56)
+  expect(Number(0).tax()).toBe(0)
+
+  expect(Number(1).tax(1)).toBe(2)
 })

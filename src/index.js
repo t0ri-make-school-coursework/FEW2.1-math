@@ -63,3 +63,10 @@ Number.prototype.radToDeg = function radToDeg(digits) {
 //   // If input has 2+ decimal numbers, return format with template string and round down
 //   return `$${Math.floor(this * 100) / 100}`
 // }
+// Challenge 7: Tax Rate
+Number.prototype.tax = function tax(rate) {
+    if (rate) {
+        return Number((this + (this * rate)).toFixed(2));
+    }
+    return Number((this * 1.25).toFixed(2));
+};
