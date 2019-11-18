@@ -8,6 +8,7 @@ interface Number {
   radToDeg: (digits: number) => number;
   toDollars: () => string;
   tax: (rate: number) => number;
+  interest: (years: number, rate: number) => number;
 }
 
 
@@ -104,4 +105,9 @@ Number.prototype.tax = function tax(rate?: number): number {
   }
 
   return Number((this * 1.25).toFixed(2))
+}
+
+// Challenge 8: Interest
+Number.prototype.interest = function interest(years: number, rate: number): number {
+  return Number((this * Math.pow((rate / 100) + 1, years)).toFixed(2))
 }

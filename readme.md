@@ -85,3 +85,11 @@ Without argument, tax rate defaults to `.25`.
 let num = 1
 num.tax(.25) -> 1.25
 ```
+
+### Interest
+The `.interest(years, rate)` method calculates interest over time.
+
+```
+let num = 1
+num.interest(2, 16) -> 1.35
+```

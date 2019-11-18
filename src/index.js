@@ -70,3 +70,7 @@ Number.prototype.tax = function tax(rate) {
     }
     return Number((this * 1.25).toFixed(2));
 };
+// Challenge 8: Interest
+Number.prototype.interest = function interest(years, rate) {
+    return Number((this * Math.pow((rate / 100) + 1, years)).toFixed(2));
+};

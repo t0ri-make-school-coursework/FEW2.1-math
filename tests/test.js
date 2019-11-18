@@ -69,3 +69,12 @@ test('Number.tax(rate)', () => {
 
   expect(Number(1).tax(1)).toBe(2)
 })
+
+// Challenge 8: Interest
+test('Number.interest(years, rate)', () => {
+  expect(Number(1).interest(2, 16)).toBe(1.35)
+  expect(Number(70000).interest(10, 0.25)).toBe(71769.82)
+
+  expect(Number(0).interest(10, 0)).toBe(0)
+  expect(Number(-1).interest(10, 1)).toBe(-1.1)
+})
