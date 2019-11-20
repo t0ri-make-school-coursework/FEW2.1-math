@@ -51,7 +51,7 @@ test('Number.radToDeg()', () => {
 
 // Challenge 6: Dollar Amount
 // test('Number.toDollars()', () => {
-//   expect(9.99.toDollars()).toBe('$9.99')
+//   expect(Number(9.99).toDollars()).toBe('$9.99')
 //   expect(Number(0.01).toDollars()).toBe('$0.01')
 
 //   expect(Number(0.1).toDollars()).toBe('$0.10')
@@ -77,4 +77,14 @@ test('Number.interest(years, rate)', () => {
 
   expect(Number(0).interest(10, 0)).toBe(0)
   expect(Number(-1).interest(10, 1)).toBe(-1.1)
+})
+
+// Challenge 9: Mortgage
+test('Number.mortgage(years, rate)', () => {
+  expect(Number(1).mortgage(2, 3)).toBe(3)
+  expect(Number(100000).mortgage(10, 0.02)).toBe(2204)
+  expect(Number(100).mortgage(10, 0.02)).toBe(2)
+
+  expect(Number(0).mortgage(2, 3)).toBe(0)
+  expect(Number(-1).mortgage(2, 3)).toBe(-4)
 })

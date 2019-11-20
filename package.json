@@ -8,6 +8,7 @@
     "test": "tests"
   },
   "scripts": {
+    "prepare": "rollup --config",
     "test": "jest",
     "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
@@ -22,7 +23,10 @@
   },
   "homepage": "https://github.com/t0ri/FEW2.1-math#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
     "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
     "jest": "^24.9.0",
     "rollup": "^1.27.2",
     "rollup-plugin-terser": "^5.1.2",

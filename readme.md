@@ -83,13 +83,22 @@ Without argument, tax rate defaults to `.25`.
 
 ```
 let num = 1
-num.tax(.25) -> 1.25
+num.tax(0.25) -> 1.25
 ```
 
 ### Interest
-The `.interest(years, rate)` method calculates interest over time.
+The `.interest(months, rate)` method calculates interest over time.
 
 ```
 let num = 1
 num.interest(2, 16) -> 1.35
+```
+
+### Mortgage
+The `.mortgage(years, rate)` returns the monthly mortgage payment of the number it is called on.
+Rate is interest rate, years is the amount of months to pay.
+
+```
+let num = 1
+num.mortgage(10, .02) -> 1
 ```

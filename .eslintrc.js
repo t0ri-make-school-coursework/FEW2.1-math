@@ -1,9 +1,12 @@
 module.exports = {
+  parser:  '@typescript-eslint/parser',
   env: {
     browser: true,
     es6: true,
   },
-  extends: 'airbnb-base',
+  extends:  [
+    'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',

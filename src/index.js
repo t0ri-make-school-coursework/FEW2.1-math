@@ -50,19 +50,19 @@ Number.prototype.radToDeg = function radToDeg(digits) {
     return degs;
 };
 // Challenge 6: Dollar Amount
-// Number.prototype.toDollars = function toDollars(): string {
-//   // If input is an integer, return format with template string
-//   if (Number.isInteger(this)) {
-//     return `$${this}.00`
-//   }
-//   // If input has just 1 decimal number, return format with template string
-//   let decimals: any = this.toString().split('.')[1].toString().length
-//   if (decimals === 1) {
-//     return `$${this}0`
-//   }
-//   // If input has 2+ decimal numbers, return format with template string and round down
-//   return `$${Math.floor(this * 100) / 100}`
-// }
+Number.prototype.toDollars = function toDollars() {
+    // If input is an integer, return format with template string
+    if (Number.isInteger(this)) {
+        return "$" + this + ".00";
+    }
+    // If input has just 1 decimal number, return format with template string
+    var decimals = String(this).split('.')[1].toString().length;
+    if (decimals === 1) {
+        return "$" + this + "0";
+    }
+    // If input has 2+ decimal numbers, return format with template string and round down
+    return "$" + Math.floor(this * 100) / 100;
+};
 // Challenge 7: Tax Rate
 Number.prototype.tax = function tax(rate) {
     if (rate) {
@@ -71,6 +71,10 @@ Number.prototype.tax = function tax(rate) {
     return Number((this * 1.25).toFixed(2));
 };
 // Challenge 8: Interest
-Number.prototype.interest = function interest(years, rate) {
-    return Number((this * Math.pow((rate / 100) + 1, years)).toFixed(2));
+Number.prototype.interest = function interest(months, rate) {
+    return Number((this * Math.pow((rate / 100) + 1, months)).toFixed(2));
+};
+// Challenge 9: Mortgage
+Number.prototype.mortgage = function mortgage(years, rate) {
+    return (this * (((rate * (Math.pow((1 + rate), (years * 12))))) / ((Math.pow((1 + rate), (years * 12))) - 1))).floor();
 };
