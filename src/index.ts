@@ -14,7 +14,7 @@ interface Number {
 
 
 // Challenge 1: Golden Ratio
-Number.prototype.constructor.goldenRatio = 1.61803398875
+// Number.prototype.constructor.goldenRatio = 1.61803398875
 
 
 // Challenge 2: Round
