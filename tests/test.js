@@ -26,7 +26,7 @@ test('Number.floor()', () => {
 
 // Challenge 3: Pad
 test('Number.pad()', () => {
-  // expect(Number(9.99).pad(1, 2)).toBe(String('9.99')) #TODO Returns an object?
+  expect(Number(9.99).pad(1, 2)).toBe(String('9.99'))
   expect(Number(9.99).pad(2, 3)).toBe(String('09.990'))
   expect(Number(9.99).pad(10, 10)).toBe(String('0000000009.9900000000'))
 })
@@ -56,7 +56,7 @@ test('Number.toDollars()', () => {
 
   expect(Number(0.1).toDollars()).toBe('$0.10')
   expect(Number(0.01).toDollars()).toBe('$0.01')
-  expect(Number(1).toDollars()).toBe('$1.00')
+  expect(Number(1).toDollars()).toBe('$1.00') // test int
 
   expect(Number(4.129408).toDollars()).toBe('$4.12')
 })
@@ -87,4 +87,19 @@ test('Number.mortgage(years, rate)', () => {
 
   expect(Number(0).mortgage(2, 3)).toBe(0)
   expect(Number(-1).mortgage(2, 3)).toBe(-4)
+})
+
+// Challenge 10: Numbers to Hex Code
+test('Number.toHex()', () => {
+  expect(Number(12).toHex()).toBe('c')
+  expect(Number(1905813).toHex()).toBe('1d1495')
+  expect(Number(23858293).toHex()).toBe('16c0c75')
+
+  expect(Number(12).toHex(true)).toBe('#c') // testing octothorpe
+  expect(Number(1905813).toHex(true)).toBe('#1d1495')
+  expect(Number(23858293).toHex(true)).toBe('#16c0c75')
+
+  expect(Number(0).toHex()).toBe('0')
+  expect(Number(1).toHex()).toBe('1')
+  expect(Number(-1).toHex()).toBe('-1')
 })

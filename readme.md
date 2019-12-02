@@ -95,10 +95,20 @@ num.interest(2, 16) -> 1.35
 ```
 
 ### Mortgage
-The `.mortgage(years, rate)` returns the monthly mortgage payment of the number it is called on.
+The `.mortgage(years, rate)` method returns the monthly mortgage payment of the number it is called on.
 Rate is interest rate, years is the amount of months to pay.
 
 ```
 let num = 1
 num.mortgage(10, .02) -> 1
+```
+
+### Number to Hex
+The `.toHex()` method returns a string containing the hexadecimal value of the number it is caled on.
+This method accepts an optional boolean argument to control the return of an `octothorpe`.
+
+```
+let num = 12
+num.toHex() -> 'c'
+num.toHex(true) -> '#c'
 ```

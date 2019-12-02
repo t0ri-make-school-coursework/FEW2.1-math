@@ -10,6 +10,7 @@ interface Number {
   tax: (rate: number) => number;
   interest: (months: number, rate: number) => number;
   mortgage: (years: number, rate: number) => number;
+  toHex: (octothorpe: boolean) => string;
 }
 
 
@@ -41,7 +42,7 @@ Number.prototype.pad = function pad(x: number, y: number): string {
   let whole: number = this.toString().split('.')[0].toString().length
   let dec: number = this.toString().split('.')[1].toString().length
   // Create a string to hold the padded number
-  let padded: string = this
+  let padded: string = String(this)
 
   // Pad the whole digits with zeros
   if (whole !== x) {
@@ -86,12 +87,12 @@ Number.prototype.radToDeg = function radToDeg(digits?: number): number {
 // Challenge 6: Dollar Amount
 Number.prototype.toDollars = function toDollars(): string {
   // If input is an integer, return format with template string
-  if (Number.isInteger(this)) {
+  if (Number.isInteger(Number(this))) {
     return `$${this}.00`
   }
   
   // If input has just 1 decimal number, return format with template string
-  let decimals: number = String(this).split('.')[1].toString().length
+  let decimals: any = String(this).split('.')[1].toString().length
   if (decimals === 1) {
     return `$${this}0`
   }
@@ -120,4 +121,14 @@ Number.prototype.interest = function interest(months: number, rate: number): num
 // Challenge 9: Mortgage
 Number.prototype.mortgage = function mortgage(years: number, rate: number): number {
   return (this * (((rate * ((1 + rate) ** (years * 12)))) / (((1 + rate) ** (years * 12)) - 1))).floor()
+}
+
+
+// Challenge 10: Numbers to Hex Code
+Number.prototype.toHex = function toHex(octothorpe?: boolean): string {
+  if (octothorpe) {
+    return `#${this.toString(16)}`
+  }
+
+  return this.toString(16)
 }
