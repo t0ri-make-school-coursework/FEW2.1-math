@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t0ri/FEW2.1-math.git"
+    "url": "git+https://github.com/t0ri-make-school-coursework/FEW2.1-math"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/t0ri/FEW2.1-math/issues"
+    "url": "https://github.com/t0ri-make-school-coursework/FEW2.1-math"
   },
-  "homepage": "https://github.com/t0ri/FEW2.1-math#readme",
+  "homepage": "https://github.com/t0ri-make-school-coursework/FEW2.1-math",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
